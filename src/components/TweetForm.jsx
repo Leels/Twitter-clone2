@@ -7,6 +7,10 @@ function TweetForm(props){
   let _author = null;
   let _body = null;
 
+  const tweetButton = {
+    marginBottom: "15px"
+  }
+
   function handleTweetFormSubmission(event) {
     event.preventDefault();
     props.onTweetCreation({author: _author.value, body: _body.value, count:0, id: v4()});
@@ -26,7 +30,7 @@ function TweetForm(props){
         <Form.Label>Body</Form.Label>
         <Form.Control as="textarea" id='body' ref={(input) => {_body = input;}} />
       </Form.Group>
-      <Button variant="info" type='submit'>Tweet!</Button>
+      <Button style={tweetButton} variant="info" type='submit'>Tweet!</Button>
     </Form>
 
   );

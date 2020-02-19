@@ -6,7 +6,9 @@ import { Card, ListGroup }from 'react-bootstrap';
 import '../App.css';
 
 function Feed(props){
+
   return (
+
 
     <Card bg="dark" style={{ width: '28rem' }}>
 
